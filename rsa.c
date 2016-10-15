@@ -83,18 +83,14 @@ void compute()
     goto TryAgain; 
   }
     
-
-
 /* generate decrypter(d) private key */ 
 
 d = 1;
 
 do
 {
-
 temp = (d*e)%fn;
 d++;
-
 } while(temp!=1);
 
 d = d-1;
@@ -108,17 +104,14 @@ printf("\n PRIVATE KEY : %d , %d ",d,n);
 
 void encrypt()
 {
-    int k;
-
+  int k;
 	k=pow(pt,e);
-    ct=(k%n);
+  ct=(k%n);
 }
 
 void decrypt()
 {
   long int l;
-  
-
   l=pow(ct,d);
   dt=(l%n);
 }
